@@ -1,0 +1,42 @@
+%Autores: Felipe
+%         Igor
+%       Lucas
+%       Thalis
+%Contato: phyllipe_slf@yahoo.com.br
+%         biblioteca.pesquisa@inatel.br
+%Modelo para escrita de artigos científicos para o TCC dos cursos Graduação do INATEL - Instituto Nacional de Telecomunicações. 
+%Este template LaTeX é uma adaptação do modelo doc desenvolvido pelos professores Carlos Ynoguti e Dayan Guimarães
+
+%Se você é novo no latex, um bom lugar para começar é
+%https://pt.overleaf.com/learn
+\documentclass[10pt,twocolumn]{article} 
+\input{configuracoes/includes.tex}
+\input{configuracoes/config.tex}
+
+\begin{document}
+
+\title{\Huge \bf Price Search: um projeto de código aberto para busca e comparação de preços em estabelecimentos locais}
+
+\author{
+    \begin{tabular}{cccc}
+    Felipe de Cássio Rocha Santos & Jonathan Donizetti Pereira & José Andare Neto & Marcelo Vinícius Cysneiros Aragão \\
+    \multicolumn{4}{c}{Instituto Nacional de Telecomunicações - Inatel} \\
+    \multicolumn{4}{c}{\{felipe.santos,jpereira,joseandare,marcelovca90\}@gec.inatel.br}
+    \end{tabular}
+}
+
+\maketitle
+
+\noindent\blfootnote{Trabalho de Conclusão de Curso apresentado ao Instituto Nacional de Telecomunicações, como parte dos requisitos para a obtenção do Grau de Bacharel em (nome do curso). Orientador: Prof. (XXXXX). Trabalho aprovado em XX/20XX.}
+
+\input{secoes/01-resumo.tex}
+\input{secoes/02-introducao.tex}
+\input{secoes/03-ferramentas.tex}
+\input{secoes/04-instrucoes-gerais.tex}
+\input{secoes/05-conclusao.tex}
+\input{secoes/06-biografia.tex}
+
+\printbibliography
+
+\input{secoes/06-biografia.tex}
+\end{document}

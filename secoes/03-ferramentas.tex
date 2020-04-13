@@ -1,0 +1,55 @@
+\section{Ferramentas}
+
+\subsection{Angular}
+Angular \cite{afonso2018angular} é uma plataforma e \textit{framework} para construção da interface de aplicações usando HTML (do inglês, \textit{HyperText Markup Language}), CSS (do inglês, \textit{Cascading Style Sheets}) e, principalmente, JavaScript, criada pelos desenvolvedores da Google. 
+
+Ele possui basicamente dois tipos: AngularJs e o Angular 2+; que são tecnologias completamente diferentes. O AngularJs é um framework baseado totalmente em JavaScript para desenvolvimento web e o Angular 2+ que surgiu para desenvolvimento não só web, mas também para mobile, usa o TypeScript, e que teve várias mudanças no modo de construção da aplicação.A arquitetura do Angular permite organizar a aplicação por módulos através dos NgModules\footnote{Lorem ipsum dolor sit amet.}, que fornecem um contexto para os componentes serem compilados. 
+
+Uma aplicação sempre tem ao menos um módulo raiz que habilita a inicialização e, normalmente, possui outros módulos de bibliotecas. Os componentes deliberam as visualizações — que são conglomerados de elementos e funcionalidades de tela — que o Angular modifica de acordo com a lógica e os dados da aplicação[2].O Angular também possui uma ferramenta chamada Angular CLI, que permite criação de utensílios que auxiliam que são necessário, como: componentes, serviços, interfaces, etc. Segue abaixo algumas vantagens do uso do Angular:  
+
+\begin{itemize}
+    \item Produtividade: desenvolver uma aplicação com ele requer bem menos código, sendo inclusive intuitivo e dando suporte para a modularização; 
+    \item Fácil manuseamento: muito fácil entender o funcionamento das aplicações lendo apenas o HTML;   
+    \item Criação de frameworks: é possível criar nosso próprio framework a partir dele;   
+    \item Teste unitário: é simples, pois toda a estrutura é desacoplada e as dependências são injetadas, o que facilita a criação de fakes, stubs, spies e mocks, melhorando – e muito – todo o processo de teste de controladores, serviços e diretivas. 
+\end{itemize}
+
+\subsection{TypeScript}
+Tendo escolhido o Angular para trabalhar com o frontend, não teria como utilizar do mesmo para desenvolver o backend, já que o Angular não é uma boa linguagem e nem possui características para isso. Portanto, para a parte de backend escolhemos o TypeScript, que é uma linguagem de programação \textit{open-sorce} desenvolvido pela \textit{Microsoft} 
+
+\subsection{NestJS}
+O NestJS cria uma camada de abstração em cima de uma das bibliotecas mais utilizadas para criação de aplicações web no mundo, o Nodejs.  Então é muito difícil comentar sobre um, sem mencionar o outro, é preciso ressaltar que deve-se ter instalado em sua máquina o Nodejs para que seja possível utilizar do Nestjs. O Nestjs é uma estrutura para criar aplicativos de forma eficiente, ele conta com um CLI (Command Line Interface) que permite a criação e configuração inicial do projeto.
+
+O Nestjs fornece uma arquitetura de aplicativos pronta para uso que permite que desenvolvedores e equipes criem aplicativos altamente testáveis, escaláveis, com acoplamentos frouxos e de fácil manutenção \cite{kamil2020nestjs}. Segue abaixo algumas vantagens do NestJS .
+
+\begin{itemize}
+    \item A estrutura de pastas no Nest é fortemente baseada em Angular; 
+    \item A estrutura é muito orientada a anotações, e as anotações tornam o desenvolvimento mais simples;   
+    \item Ferramenta de linha de comando permitirá monitorar o projeto, gerar componentes da arquitetura Nest e exibir informações do projeto;   
+\end{itemize}
+
+\subsection{Visual Studio Code}
+Como IDE (\textit{Integrated Development Environment}) a ferramenta escolhida para ser utilizada foi o Visual Studio Code que é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. A escolha dessa ferramenta foi devido ser \textit{open source}, possuir suporte para o Git e a abrangência que ela traz para aplicação de \textit{plugins}, ou seja, mecanismos que facilitam na programação para a devida linguagem escolhida.
+
+Com suporte para centenas de idiomas, o VS Code ajuda você a ser instantaneamente produtivo com realce de sintaxe, correspondência de colchetes, recuo automático, seleção de caixa, trechos e muito mais. Atalhos de teclado intuitivos, personalização fácil e mapeamentos de atalhos de teclado contribuídos pela comunidade permitem navegar com facilidade pelo seu código. \cite{mjbvz2020VSCode}
+
+
+\subsection{Gitpod}
+Como o GitHub possui recursos limitados para edição, forçando muitas vezes os usuários utilizar de recursos locais em suas máquinas para resolver até pequenos problemas, o Gitpod surge como uma luz para os amantes de GitHub. Ele não é simplesmente uma IDE online, ele é muito mais do que isso, ele é como uma extensão para edição do GitHub, usando como IDE base o Visual Studio Code. 
+
+Diferentemente dos IDEs tradicionais da nuvem e da área de trabalho, o Gitpod entende o contexto e prepara o IDE automaticamente. Por exemplo, se você estiver criando um espaço de trabalho Gitpod a partir de uma solicitação pull do GitHub, o IDE será aberto no modo de revisão de código. Além disso, os espaços de trabalho do Gitpod devem ser descartáveis. Ou seja, você não precisa manter nada. Eles são criados quando você precisar deles, e você pode esquecê-los quando terminar \cite{jankeromnes2020Gitpod}. 
+
+
+\subsection{Swagger}
+A ferramenta Swagger é outra que não poderia faltar no projeto, feita para modelagem, documentação e geração de código para APIs do estilo REST, seja manualmente ou geradas automaticamente a partir do código-fonte, traz uma enorme vantagem para quem deseja trabalhar com testes de APIs. A capacidade das APIs de descrever sua própria estrutura é a raiz de toda a grandiosidade do Swagger.
+
+Podemos criar automaticamente uma documentação API bonita e interativa. Também podemos gerar automaticamente bibliotecas de clientes para sua API em vários idiomas e explorar outras possibilidades, como testes automatizados. O Swagger faz isso solicitando que sua API retorne um YAML ou JSON que contenha uma descrição detalhada de toda a API. Este arquivo é essencialmente uma lista de recursos da sua API que adere à especificação \textit{OpenAPI} \cite{shockey2020Swagger}. A especificação solicita que você inclua informações como:
+
+\begin{itemize}
+    \item Quais são todas as operações suportadas pela sua API? 
+    \item Quais são os parâmetros da sua API e o que ela retorna?   
+    \item Sua API precisa de alguma autorização?
+    \item E até coisas divertidas, como termos, informações de contato e licença para usar a API.
+\end{itemize}
+
+\

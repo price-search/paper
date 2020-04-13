@@ -1,0 +1,1 @@
+Gerador de referências: <https://truben.no/latex/bibtex/>
