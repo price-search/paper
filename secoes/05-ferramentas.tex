@@ -3,7 +3,7 @@
 \subsection{Angular}
 Angular \cite{afonso2018angular} é uma plataforma e \textit{framework} para construção da interface de aplicações usando HTML (do inglês, \textit{HyperText Markup Language}), CSS (do inglês, \textit{Cascading Style Sheets}) e, principalmente, JavaScript, criada pelos desenvolvedores da Google. 
 
-Ele possui basicamente dois tipos: AngularJs e o Angular 2+; que são tecnologias completamente diferentes. O AngularJs é um framework baseado totalmente em JavaScript para desenvolvimento web e o Angular 2+ que surgiu para desenvolvimento não só web, mas também para mobile, usa o TypeScript, e que teve várias mudanças no modo de construção da aplicação.A arquitetura do Angular permite organizar a aplicação por módulos através dos NgModules\footnote{Lorem ipsum dolor sit amet.}, que fornecem um contexto para os componentes serem compilados. 
+Ele possui basicamente dois tipos: AngularJs e o Angular 2+; que são tecnologias completamente diferentes. O AngularJs é um framework baseado totalmente em JavaScript para desenvolvimento web e o Angular 2+ que surgiu para desenvolvimento não só web, mas também para mobile, usa o TypeScript, e que teve várias mudanças no modo de construção da aplicação. A arquitetura do Angular permite organizar a aplicação por módulos através dos NgModules\footnote{Lorem ipsum dolor sit amet.}, que fornecem um contexto para os componentes serem compilados. 
 
 Uma aplicação sempre tem ao menos um módulo raiz que habilita a inicialização e, normalmente, possui outros módulos de bibliotecas. Os componentes deliberam as visualizações — que são conglomerados de elementos e funcionalidades de tela — que o Angular modifica de acordo com a lógica e os dados da aplicação[2].O Angular também possui uma ferramenta chamada Angular CLI, que permite criação de utensílios que auxiliam que são necessário, como: componentes, serviços, interfaces, etc. Segue abaixo algumas vantagens do uso do Angular:  
 
@@ -15,12 +15,14 @@ Uma aplicação sempre tem ao menos um módulo raiz que habilita a inicializaç�
 \end{itemize}
 
 \subsection{TypeScript}
-Tendo escolhido o Angular para trabalhar com o frontend, não teria como utilizar do mesmo para desenvolver o backend, já que o Angular não é uma boa linguagem e nem possui características para isso. Portanto, para a parte de backend escolhemos o TypeScript, que é uma linguagem de programação \textit{open-sorce} desenvolvido pela \textit{Microsoft} 
+Para a parte de \textit{backend} escolhemos o TypeScript desenvolvida pela \textit{Microsoft}, que é uma linguagem de programação \textit{open-sorce} e traduzida, ou seja, no momento de pré-execução da aplicação, o TypeScript é traduzido para JavaScript, que é uma linguagem de programação interpretada. Tendo como uma das maiores diferenças a tipagem de variáveis, é possível um código em TypeScript ser facilmente convertido em JavaScript. 
+
+Seu uso elimina muitos erros gerados aleatoriamente que resultam de tipos de dados não confiáveis. Graças a isso, o programador pode se concentrar no desenvolvimento de um aplicativo e não perde tempo desnecessariamente na pesquisa e análise dos erros resultantes. Outra vantagem do TypeScript é a capacidade de eliminar a falta de consistência entre a resposta real do servidor e o formato de dados esperado pelo front-end \cite{Jakub2019TypeScript}.
 
 \subsection{NestJS}
-O NestJS cria uma camada de abstração em cima de uma das bibliotecas mais utilizadas para criação de aplicações web no mundo, o Nodejs.  Então é muito difícil comentar sobre um, sem mencionar o outro, é preciso ressaltar que deve-se ter instalado em sua máquina o Nodejs para que seja possível utilizar do Nestjs. O Nestjs é uma estrutura para criar aplicativos de forma eficiente, ele conta com um CLI (Command Line Interface) que permite a criação e configuração inicial do projeto.
+O Nestjs é um \textit{framework} para criação de backends web usando TypeScript, com estruturas de código similar ao Angular, ele cria uma camada de abstração em cima de uma das bibliotecas mais utilizadas para criação de aplicações web no mundo, o Nodejs.  Então é muito difícil comentar sobre um, sem mencionar o outro, é preciso ressaltar que deve-se ter instalado em sua máquina o Nodejs para que seja possível utilizar do Nestjs. O Nestjs é uma estrutura para criar aplicativos de forma eficiente, ele conta com um CLI (Command Line Interface) que permite a criação e configuração inicial do projeto.
 
-O Nestjs fornece uma arquitetura de aplicativos pronta para uso que permite que desenvolvedores e equipes criem aplicativos altamente testáveis, escaláveis, com acoplamentos frouxos e de fácil manutenção \cite{kamil2020nestjs}. Segue abaixo algumas vantagens do NestJS .
+O Nestjs fornece uma arquitetura de aplicativos pronta para uso que permite que desenvolvedores e equipes criem aplicativos altamente testáveis, escaláveis, com acoplamentos frouxos e de fácil manutenção \cite{kamil2020nestjs}. Segue abaixo algumas vantagens do Nestjs .
 
 \begin{itemize}
     \item A estrutura de pastas no Nest é fortemente baseada em Angular; 
@@ -37,7 +39,7 @@ Com suporte para centenas de idiomas, o VS Code ajuda você a ser instantaneamen
 \subsection{Gitpod}
 Como o GitHub possui recursos limitados para edição, forçando muitas vezes os usuários utilizar de recursos locais em suas máquinas para resolver até pequenos problemas, o Gitpod surge como uma luz para os amantes de GitHub. Ele não é simplesmente uma IDE online, ele é muito mais do que isso, ele é como uma extensão para edição do GitHub, usando como IDE base o Visual Studio Code. 
 
-Diferentemente dos IDEs tradicionais da nuvem e da área de trabalho, o Gitpod entende o contexto e prepara o IDE automaticamente. Por exemplo, se você estiver criando um espaço de trabalho Gitpod a partir de uma solicitação pull do GitHub, o IDE será aberto no modo de revisão de código. Além disso, os espaços de trabalho do Gitpod devem ser descartáveis. Ou seja, você não precisa manter nada. Eles são criados quando você precisar deles, e você pode esquecê-los quando terminar \cite{jankeromnes2020Gitpod}. 
+Diferentemente dos IDEs tradicionais da nuvem e da área de trabalho, o Gitpod entende o contexto e prepara o IDE automaticamente. Por exemplo, se você estiver criando um espaço de trabalho Gitpod a partir de um \textit{pull request} do GitHub, a IDE será aberta no modo de revisão de código. Além disso, os espaços de trabalho do Gitpod devem ser descartáveis. Ou seja, você não precisa manter nada. Eles são criados quando você precisar deles, e você pode esquecê-los quando terminar \cite{jankeromnes2020Gitpod}. 
 
 
 \subsection{Swagger}
@@ -51,5 +53,11 @@ Podemos criar automaticamente uma documentação API bonita e interativa. També
     \item Sua API precisa de alguma autorização?
     \item E até coisas divertidas, como termos, informações de contato e licença para usar a API.
 \end{itemize}
+
+\subsection{Ambiente}
+Com as principais ferramentas já descritas, existe outras que também contribuem para o desenvolvimento, e ajudam nas configurações de ambiente que serão descritas a seguir. Entre elas estão, a biblioteca \textit{Material Design} que é responsável por complementar a linguagem Angular com uma série de componentes, o \textit{framework} Nodejs como já comentado acima, é o interpretador de JavaScript, é com ele que rodamos código JavaScript, portanto TypeScript também, é preciso ter instalado para que se consiga rodar os comandos Nestjs. 
+
+Para controle de versão, estamos utilizando o mecanismo de Git, e a plataforma escolhida é o GitHub, pois trás uma enorme capacidade de controle e ordem do projeto. E por fim o banco de dados, onde o escolhido foi o MongoDB, que é orientado a documentos, e esses documentos são semelhantes a arquivos JSON, e isso torna o desenvolvimento mais fácil se comparado a banco de dados SQL, e a plataforma online que provê um cluster rodando o MongoDB para nossa aplicação é a MongoDB Atlas.
+
 
 \
