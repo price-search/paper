@@ -7,7 +7,31 @@ Outra ideia da aplicação é ajudar na busca de produtos, que antes não se sab
 
 O intuito foi criar uma ferramenta simples, de fácil uso, e sendo ela multiplataformas, com o objetivo de agregar a quantidade máxima de usuários possíveis, para que todos possam usá-lo de maneira eficiente e rápida.
 
-\subsection{Casos de Uso}
+\subsection{Diagrama de Blocos}
+
+ Donec accumsan orci luctus dolor sagittis viverra. Praesent vel leo at tellus vestibulum pulvinar. Duis laoreet sapien diam. Quisque condimentum tincidunt imperdiet. Ut vehicula mattis nisi lobortis viverra. Nullam id lorem ante. Maecenas sodales neque purus, ut eleifend ipsum consectetur non. In vehicula nisl augue, eu tempor enim vulputate vitae.
+ 
+\begin{figure}[!htb]
+\centering
+\caption{Imagem de exemplo.}
+\includegraphics[width=\linewidth]{figuras/block-diagram.png}
+\end{figure}
+ 
+ Vivamus ullamcorper metus et felis tincidunt consequat. Cras eu augue faucibus, viverra odio id, placerat nibh. Duis et efficitur ex. Donec tincidunt suscipit lacus, id interdum sem posuere vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tristique dictum congue. Donec ut neque non magna faucibus tempor quis id dolor. 
+
+\subsection{Modelo de Dados}
+ 
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros ligula, semper sit amet viverra eget, bibendum quis massa. Nullam urna enim, euismod non sapien vel, ornare ullamcorper sem. Proin faucibus, magna in pharetra efficitur, augue nibh volutpat lorem, eu porttitor nulla eros in nibh. Etiam nec dui vitae ligula tincidunt accumsan.
+ 
+\begin{figure}[!htb]
+\centering
+\caption{Imagem de exemplo.}
+\includegraphics[width=\linewidth]{figuras/mer.png}
+\end{figure}
+ 
+ Cras eu nisi volutpat leo efficitur sagittis a vehicula orci. Integer sed erat vel purus ullamcorper faucibus at in tortor. Donec laoreet faucibus lacus, eget cursus quam lacinia at. Aliquam interdum lorem eu nulla laoreet, sed blandit nisi rhoncus. Sed vitae consectetur massa, ut scelerisque urna. Maecenas sed condimentum quam, in dignissim lectus. 
+ 
+ \subsection{Casos de Uso}
 O diagrama de casos de uso da aplicação ilustra as ações de um usuário, que terá acesso às funções listadas, conforme a figura abaixo:
 
 \begin{figure}[!htb]
@@ -17,7 +41,7 @@ O diagrama de casos de uso da aplicação ilustra as ações de um usuário, que
 {\footnotesize Fonte: Elaborado pelo autor.}
 \end{figure}
 
-\subsection{Caso de Uso 01: Login usuário}
+\subsubsection{Caso de Uso 01: Login usuário}
 
 O usuário inicia o login utilizando uma conta existente da Google, não sendo necessário preenchimento de nenhum tipo de dados. Feito isso, o assistente irá validar os dados do mesmo e o login será efetuado. Feito isso, nossa aplicação utilizará do ‘token’ fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
 
@@ -27,7 +51,7 @@ O usuário inicia o login utilizando uma conta existente da Google, não sendo n
 \includegraphics[width=\linewidth]{figuras/placeholder.jpg}
 \end{figure}
 
-\subsection{Caso de Uso 02: Pesquisar}
+\subsubsection{Caso de Uso 02: Pesquisar}
 
 A pesquisa será feita através dos nome de produtos, então o usuário poderá pesquisar por qualquer item, desde que o mesmo esteja no banco de dados. O sistema irá retornar todos os itens que tem o mesmo nome, no formato de uma lista. (perguntar se adiciona filtro).
 
@@ -37,7 +61,7 @@ A pesquisa será feita através dos nome de produtos, então o usuário poderá 
 \includegraphics[width=\linewidth]{figuras/placeholder.jpg}
 \end{figure}
 
-\subsection{Caso de Uso 03: Gerenciar Lista de Compra}
+\subsubsection{Caso de Uso 03: Gerenciar Lista de Compra}
 
 O usuário poderá criar várias listas de compra como se fosse um carrinho de compras. Ao criar uma lista, o usuário poderá escolher um nome para ela; bem como escolher quais itens serão adicionados, e removê-los a qualquer momento; ou mesmo renomear a lista ou exclui-lá.
 
@@ -47,7 +71,7 @@ O usuário poderá criar várias listas de compra como se fosse um carrinho de c
 \includegraphics[width=\linewidth]{figuras/placeholder.jpg}
 \end{figure}
 
-\subsection{Caso de Uso 04: Adicionar Favoritos}
+\subsubsection{Caso de Uso 04: Adicionar Favoritos}
 
 Cada produto possui um botão para adicionar aos favoritos, que será uma aba na aplicação contendo a lista de todos os itens que foram salvos pelo usuário. Nesta lista ‘padrão’, o usuário também poderá adicionar e remover itens a qualquer momento.
 
@@ -57,7 +81,7 @@ Cada produto possui um botão para adicionar aos favoritos, que será uma aba na
 \includegraphics[width=\linewidth]{figuras/placeholder.jpg}
 \end{figure}
 
-\subsection{Caso de Uso 05: Visualizar Mapa}
+\subsubsection{Caso de Uso 05: Visualizar Mapa}
 
 O usuário terá acesso à um mapa que contém a localização de todos os estabelecimentos locais. Ao clicar nos estabelecimentos mostrados no mapa, irá ser fornecido informações sobre ele, como: nome e endereço.
 
