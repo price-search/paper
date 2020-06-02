@@ -1,33 +1,35 @@
 \section{Proposta}
+\label{sec:proposta}
 
 \subsection{A aplicação Price Search}
+
 A aplicação PriceSearch foi pensado com o intuito de facilitar a pesquisa de preço de qualquer tipo de item existente no mercado, sejam eles eletrodomésticos, alimentos, utensílios, remédios, etc. Hoje em dia podemos encontrar diversos tipos de produtos em sites de grandes lojas, porém como existem várias cidades no Brasil que não possuem dessas grandes lojas, percebe-se que há uma grande dificuldade para saber em qual lugar tem tal item mais barato. Com isso, a ideia da aplicação é que as pessoas tenham acesso à um recurso para comparação de preço dos produtos dos estabelecimentos locais, a fim de ajudar as pessoas à economizar dinheiro. 
 
-Outra ideia da aplicação é ajudar na busca de produtos, que antes não se sabia onde vendia. Com uma simples pesquisa, o usuário pode identificar facilmente o valor desse produto e onde encontrá-lo, através de um mapa que fornecerá a localização do estabelecimento contendo o seu endereço.
+Outra ideia da aplicação é ajudar na busca de produtos, que antes não se sabia onde vendia. Com uma simples pesquisa, o usuário pode identificar facilmente o valor desse produto e onde encontrá-lo, por meio de um mapa que fornecerá a localização do estabelecimento contendo o seu endereço.
 
-O intuito foi criar uma ferramenta simples, de fácil uso, e sendo ela multiplataformas, com o objetivo de agregar a quantidade máxima de usuários possíveis, para que todos possam usá-lo de maneira eficiente e rápida.
+O intuito é criar uma ferramenta simples, de fácil uso, e sendo ela multiplataformas, com o objetivo de agregar a quantidade máxima de usuários possíveis, para que todos possam usá-lo de maneira eficiente e rápida.
 
 \subsection{Progressive web app}
 
-O PWA é uma aplicação web que também se comporta como uma uma aplicação nativa, ele facilita o desenvolvimento de aplicações. Ele utiliza servisse workers, que são scripts que controlam o armazenamento de cache, fornecendo um melhor desempenho pois permite que os assetes e boa parte do front-and persista armazenado no dispositivo, isso faz com que em alguns casos seja possível utiliza-lo completamente off-line.
+O PWA é uma aplicação \textit{web} que também se comporta como uma uma aplicação nativa, ele facilita o desenvolvimento de aplicações. Ele utiliza \textit{service workers}, que são \textit{scripts} que controlam o armazenamento de \textit{cache}, fornecendo um melhor desempenho pois permite que os assetes e boa parte do \textit{front-and} persista armazenado no dispositivo, isso faz com que em alguns casos seja possível utiliza-lo completamente \textit{off-line}.
 
-Mesmo sendo uma aplicação web, o PWA pode acessar todos os recursos do celular, como câmera, GPS e contatos, assim facilitando a vida do usuário.
+Mesmo sendo uma aplicação web, o PWA pode acessar todos os recursos do celular, como câmera, \textit{GPS} e contatos, assim facilitando a vida do usuário.
 
-Diferente dos aplicativos que necessitam que ele seja baixado de uma app store, a única coisa que o usuário precisa fazer e entrar no site e caso goste ele pode salvar a aplicação web no seu celular, como se fosse um app mobile.
+Diferente dos aplicativos que necessitam que ele seja baixado de uma \textit{app store}, a única coisa que o usuário precisa fazer e entrar no site e caso goste ele pode salvar a aplicação \textit{web} no seu celular, como se fosse um \textit{app mobile}.
 
 
 \subsection{Diagrama de Blocos}
 
- Donec accumsan orci luctus dolor sagittis viverra. Praesent vel leo at tellus vestibulum pulvinar. Duis laoreet sapien diam. Quisque condimentum tincidunt imperdiet. Ut vehicula mattis nisi lobortis viverra. Nullam id lorem ante. Maecenas sodales neque purus, ut eleifend ipsum consectetur non. In vehicula nisl augue, eu tempor enim vulputate vitae.
+ o diagrama de blocos é uma representação gráfica de todas as tecnologias que foram utilizadas no desenvolvimento do projeto, e de como é a comunicação entre elas.
  
 \begin{figure}[!htb]
 \centering
-\caption{Imagem de exemplo.}
 \includegraphics[width=\linewidth]{figuras/diagrama_de_blocos.png}
+\caption{Imagem de exemplo.}
 \end{figure}
  
- Vivamus ullamcorper metus et felis tincidunt consequat. Cras eu augue faucibus, viverra odio id, placerat nibh. Duis et efficitur ex. Donec tincidunt suscipit lacus, id interdum sem posuere vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tristique dictum congue. Donec ut neque non magna faucibus tempor quis id dolor. 
-
+ No projeto foi utilizado PostgreSQL como banco de dados, NestJS, REST (do inglês, \textit{Representational State Transfer}\footnote{}. A aplicação foi feita com Angular, e foram utilizados o Firebase para autenticação de usuário e o Google Maps Plataforma\footnote{} para localização das estabelecimentos, conforme explicado na seção \ref{sec:ferramentas}.
+ 
 \subsection{Modelo de Dados}
  
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros ligula, semper sit amet viverra eget, bibendum quis massa. Nullam urna enim, euismod non sapien vel, ornare ullamcorper sem. Proin faucibus, magna in pharetra efficitur, augue nibh volutpat lorem, eu porttitor nulla eros in nibh. Etiam nec dui vitae ligula tincidunt accumsan.
@@ -50,9 +52,9 @@ O diagrama de casos de uso da aplicação ilustra as ações de um usuário, que
 {\footnotesize Fonte: Elaborado pelo autor.}
 \end{figure}
 
-\subsubsection{Caso de Uso 01: Login usuário}
+\subsubsection{Caso de Uso 01: \textit{Login}}
 
-O usuário inicia o login utilizando uma conta existente da Google, não sendo necessário preenchimento de nenhum tipo de dados. Feito isso, o assistente irá validar os dados do mesmo e o login será efetuado. Feito isso, nossa aplicação utilizará do ‘token’ fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
+O usuário inicia o login utilizando uma conta existente da Google, não sendo necessário preenchimento de nenhum tipo de dados. Feito isso, o assistente irá validar os dados do mesmo e o login será efetuado. Feito isso, nossa aplicação utilizará do ``token'' fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
 
 \begin{figure}[!htb]
 \centering
