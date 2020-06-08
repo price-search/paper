@@ -3,32 +3,35 @@
 
 \subsection{A aplicação Price Search}
 
-A aplicação PriceSearch foi pensado com o intuito de facilitar a pesquisa de preço de qualquer tipo de item existente no mercado, sejam eles eletrodomésticos, alimentos, utensílios, remédios, etc. Hoje em dia podemos encontrar diversos tipos de produtos em sites de grandes lojas, porém como existem várias cidades no Brasil que não possuem dessas grandes lojas, percebe-se que há uma grande dificuldade para saber em qual lugar tem tal item mais barato. Com isso, a ideia da aplicação é que as pessoas tenham acesso à um recurso para comparação de preço dos produtos dos estabelecimentos locais, a fim de ajudar as pessoas à economizar dinheiro. 
+A aplicação Price Search foi pensado com o intuito de facilitar a pesquisa de preço de qualquer tipo de item existente no mercado, sejam eles eletrodomésticos, alimentos, utensílios, remédios, etc. Hoje em dia podemos encontrar diversos tipos de produtos em sites de grandes lojas, porém como existem várias cidades no Brasil que não possuem dessas grandes lojas, percebe-se que há uma grande dificuldade para saber em qual lugar tem tal item mais barato. Com isso, a ideia da aplicação é que as pessoas tenham acesso à um recurso para comparação de preço dos produtos dos estabelecimentos locais, a fim de ajudar as pessoas à economizar dinheiro. 
 
-Outra ideia da aplicação é ajudar na busca de produtos, que antes não se sabia onde vendia. Com uma simples pesquisa, o usuário pode identificar facilmente o valor desse produto e onde encontrá-lo, por meio de um mapa que fornecerá a localização do estabelecimento contendo o seu endereço.
+Outra ideia da aplicação é ajudar na busca de produtos, que antes não se sabiam onde eram vendidos. Com uma simples pesquisa, o usuário pode identificar facilmente o valor desses produtos e onde encontrá-los, por meio de um mapa que fornecerá a localização do estabelecimento contendo o seu endereço. 
 
-O intuito é criar uma ferramenta simples, de fácil uso, e sendo ela multiplataformas, com o objetivo de agregar a quantidade máxima de usuários possíveis, para que todos possam usá-lo de maneira eficiente e rápida.
+O intuito é criar uma ferramenta simples, de fácil uso, e sendo ela multiplataformas, com o objetivo de agregar a quantidade máxima de usuários possíveis, para que todos possam usá-lo de maneira rápida e eficiente.
+
+\subsection{CRUD}
+No projeto haverão CRUDs (do inglês, \textit{ Create, read, update and delete}) que irão realizar as operações básicas como criar, deletar, ler ou editar as informações no banco de dados dos produtos, listas de compras, ofertas, estabelecimentos e usuários. 
 
 \subsection{Progressive web app}
 
-O PWA é uma aplicação \textit{web} que também se comporta como uma uma aplicação nativa, ele facilita o desenvolvimento de aplicações. Ele utiliza \textit{service workers}, que são \textit{scripts} que controlam o armazenamento de \textit{cache}, fornecendo um melhor desempenho pois permite que os assetes e boa parte do \textit{front-and} persista armazenado no dispositivo, isso faz com que em alguns casos seja possível utiliza-lo completamente \textit{off-line}.
+O PWA é uma aplicação \textit{web} que também se comporta como uma uma aplicação nativa e ele facilita o desenvolvimento de aplicações. Ele utiliza \textit{service workers}, que são \textit{scripts} que controlam o armazenamento de \textit{cache}, fornecendo um melhor desempenho, pois permite que os \textit{assets} e boa parte do \textit{front-end} persista armazenado no dispositivo, isso faz com que em alguns casos seja possível utiliza-lo completamente \textit{off-line}.
 
-Mesmo sendo uma aplicação web, o PWA pode acessar todos os recursos do celular, como câmera, \textit{GPS} e contatos, assim facilitando a vida do usuário.
+Mesmo sendo uma aplicação web, o PWA pode acessar grande parte dos recursos do dispositivo, como câmera, \textit{GPS} e contatos, assim podendo ser usado de forma dinâmica.
 
-Diferente dos aplicativos que necessitam que ele seja baixado de uma \textit{app store}, a única coisa que o usuário precisa fazer e entrar no site e caso goste ele pode salvar a aplicação \textit{web} no seu celular, como se fosse um \textit{app mobile}.
+Diferente dos aplicativos que necessitam que ele seja baixado de uma loja de aplicativos, a única coisa que o usuário precisa fazer é entrar no site e caso goste ele pode salvar a aplicação \textit{web} no seu celular, como se fosse um \textit{app mobile}. E recentemente, o Google Play Store também se abriu para aplicações PWA, tornando a distribuição desse tipo de aplicação também compatível com o método convencional.
 
 
 \subsection{Diagrama de Blocos}
 
- o diagrama de blocos é uma representação gráfica de todas as tecnologias que foram utilizadas no desenvolvimento do projeto, e de como é a comunicação entre elas.
+ O diagrama de blocos é uma representação gráfica de todas as tecnologias que foram utilizadas no desenvolvimento do projeto, e de como é a comunicação entre elas.
  
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\linewidth]{figuras/diagrama_de_blocos.png}
-\caption{Imagem de exemplo.}
+\caption{Diagrama de blocos da aplicação Price Search.}
 \end{figure}
  
- No projeto foi utilizado PostgreSQL como banco de dados, NestJS, REST (do inglês, \textit{Representational State Transfer}\footnote{}. A aplicação foi feita com Angular, e foram utilizados o Firebase para autenticação de usuário e o Google Maps Plataforma\footnote{} para localização das estabelecimentos, conforme explicado na seção \ref{sec:ferramentas}.
+ No projeto foi utilizado PostgreSQL\footnote{Conforme explicado na seção \ref{ssec:Ambiente}} como banco de dados, NodeJs\footnote{Conforme explicado na seção \ref{ssec:NestJS}} e REST (do inglês, \textit{Representational State Transfer}\footnote{REST consiste em princípios ou regras que, quando seguidas, permitem a criação de um projeto com interfaces bem definidas. Disponível em: \url{https://becode.com.br/o-que-e-api-rest-e-restful/}}. A aplicação foi feita com Angular, e foram utilizados o Firebase para autenticação de usuário e o Google Maps Plataforma\footnote{Google Maps é um serviço de pesquisa e visualização de mapas e imagens de satélite da Terra gratuito na web. Disponível em: \url{https://www.google.com.br/}} para localização dos estabelecimentos, conforme explicado na seção \ref{sec:ferramentas}
  
 \subsection{Modelo de Dados}
  
@@ -38,7 +41,7 @@ Diferente dos aplicativos que necessitam que ele seja baixado de uma \textit{app
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\linewidth]{figuras/MER.png}
-\caption{Imagem de exemplo.}
+\caption{MER da aplicação Price Search.}
 \end{figure}
  
   
@@ -55,7 +58,7 @@ O diagrama de casos de uso da aplicação ilustra as ações de um usuário, que
 
 \subsubsection{Caso de Uso 01: \textit{Login}}
 
-O usuário inicia o login utilizando uma conta existente da Google, não sendo necessário preenchimento de nenhum tipo de dados. Feito isso, o assistente irá validar os dados do mesmo e o login será efetuado. Feito isso, nossa aplicação utilizará do ``token'' fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
+O usuário inicia o login utilizando uma conta existente do Google, não sendo necessário preenchimento de nenhum tipo de dado. Feito isso, o assistente irá validar os dados do usuário e o login será efetuado. Nossa aplicação utilizará do ``token'' fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
 
 \begin{figure}[!htb]
 \centering
@@ -65,7 +68,7 @@ O usuário inicia o login utilizando uma conta existente da Google, não sendo n
 
 \subsubsection{Caso de Uso 02: Pesquisar}
 
-A barra de pesquisa se encontra no topo da página, junto dela também existe um botão de menu para mostrar todas as abas do aplicativo. A pesquisa será feita através dos nome de produtos, então o usuário poderá pesquisar por qualquer item, desde que o mesmo esteja no banco de dados, e o sistema irá retornar todos os itens que tem o mesmo nome. (perguntar se adiciona filtro).
+A barra de pesquisa se encontra no topo da página, junto dela também existe um botão de menu para mostrar todas as abas do aplicativo. A pesquisa será feita através do nome do produto, então o usuário poderá pesquisar por qualquer item, desde que o mesmo esteja no banco de dados, e o sistema irá retornar todos os itens de acordo com a pesquisa feita.
 
 \begin{figure}[!htb]
 \centering
@@ -75,7 +78,7 @@ A barra de pesquisa se encontra no topo da página, junto dela também existe um
 
 \subsubsection{Caso de Uso 03: Gerenciar Lista de Compra}
 
-O usuário poderá criar várias listas de compra como se fosse um carrinho de compras. Ao criar uma lista, o usuário poderá escolher um nome para ela; bem como escolher quais itens serão adicionados, e removê-los a qualquer momento; ou mesmo renomear a lista ou exclui-lá.
+O usuário poderá criar várias listas de compra como se fosse um carrinho de compras. Ao criar uma lista, o usuário poderá escolher um nome para ela; bem como escolher quais itens serão adicionados futuramente, e removê-los a qualquer momento; ou mesmo renomear a lista ou exclui-lá.
 
 \begin{figure}[!htb]
 \centering
@@ -90,12 +93,12 @@ O usuário poderá comparar preços de um produto em diferentes estabelecimentos
 \begin{figure}[!htb]
 \centering
 \caption{Imagem de exemplo.}
-\includegraphics[width=\linewidth]{figuras/placeholder.jpg}
+\includegraphics[width=\linewidth]{figuras/tela-comparar.png}
 \end{figure}
 
 \subsubsection{Caso de Uso 05: Fazer Orçamento}
 
-O usuário poderá criar listas de compra e ao fazer isso ele poderá realizar o orçamento delas nos estabelecimentos desejados, assim podendo orçar todo a compra de uma vez, e descobrir onde ela ficara mais barata.
+O usuário poderá criar listas de compras, e ao fazer isso ele poderá realizar o orçamento, e descobrir em qual estabelecimento a compra ficará mais barata.
 
 \begin{figure}[!htb]
 \centering
