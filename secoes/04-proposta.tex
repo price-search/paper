@@ -23,19 +23,20 @@ Diferente dos aplicativos que necessitam que ele seja baixado de uma loja de apl
 
 \subsection{Diagrama de Blocos}
 
- O diagrama de blocos é uma representação gráfica de todas as tecnologias que foram utilizadas no desenvolvimento do projeto, e de como é a comunicação entre elas.
+ O diagrama de blocos (ilustrado na Figura  \ref{fig:diagrama_de_blocos}) é uma representação gráfica de todas as tecnologias que foram utilizadas no desenvolvimento do projeto, e de como é a comunicação entre elas.
  
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\linewidth]{figuras/diagrama_de_blocos.png}
 \caption{Diagrama de blocos da aplicação Price Search.}
+\label{fig:diagrama_de_blocos}
 \end{figure}
  
- No projeto foi utilizado PostgreSQL\footnote{Conforme explicado na seção \ref{ssec:Ambiente}} como banco de dados, NodeJs\footnote{Conforme explicado na seção \ref{ssec:NestJS}} e REST (do inglês, \textit{Representational State Transfer}\footnote{REST consiste em princípios ou regras que, quando seguidas, permitem a criação de um projeto com interfaces bem definidas. Disponível em: \url{https://becode.com.br/o-que-e-api-rest-e-restful/}}. A aplicação foi feita com Angular, e foram utilizados o Firebase para autenticação de usuário e o Google Maps Plataforma\footnote{Google Maps é um serviço de pesquisa e visualização de mapas e imagens de satélite da Terra gratuito na web. Disponível em: \url{https://www.google.com.br/}} para localização dos estabelecimentos, conforme explicado na seção \ref{sec:ferramentas}
+ No projeto foi utilizado PostgreSQL como banco de dados, NodeJs e REST (do inglês, \textit{Representational State Transfer}\footnote{REST consiste em princípios ou regras que, quando seguidas, permitem a criação de um projeto com interfaces bem definidas. Disponível em: \url{https://becode.com.br/o-que-e-api-rest-e-restful/}}. A aplicação foi feita com Angular, e foram utilizados o Firebase para autenticação de usuário e o Google Maps Plataforma\footnote{Google Maps é um serviço de pesquisa e visualização de mapas e imagens de satélite da Terra gratuito na \textit{web}. Disponível em: \url{https://www.google.com.br/}} para localização dos estabelecimentos, conforme explicado na seção \ref{sec:ferramentas}.
  
 \subsection{Modelo de Dados}
  
- O MER (modelo entidade relacionamento), explica como os objetos e características de um modelo de negócios se relacionam entre si. De forma geral o MER descreve como um banco de dados da aplicação é estruturado.
+ O MER (modelo entidade relacionamento), explica como os objetos e características de um modelo de negócios se relacionam entre si. De forma geral o MER descreve como um banco de dados da aplicação é estruturado, ilustrado na figura abaixo:
  
  
 \begin{figure}[!htb]
@@ -51,68 +52,61 @@ O diagrama de casos de uso da aplicação ilustra as ações de um usuário, que
 
 \begin{figure}[!htb]
 \centering
-\caption{Diagrama de Casos de Uso Price Search.}
 \includegraphics[width=\linewidth]{figuras/DiagramaCasosUsoPriceSearch.png}
-{\footnotesize Fonte: Elaborado pelo autor.}
+\caption{Diagrama de Casos de Uso do Price Search.}
 \end{figure}
 
 \subsubsection{Caso de Uso 01: \textit{Login}}
 
-O usuário inicia o login utilizando uma conta existente do Google, não sendo necessário preenchimento de nenhum tipo de dado. Feito isso, o assistente irá validar os dados do usuário e o login será efetuado. Nossa aplicação utilizará do ``token'' fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
+O usuário inicia o login (ilustrado na Figura  \ref{fig:login}) utilizando uma conta existente do Google, não sendo necessário preenchimento de nenhum tipo de dado. Feito isso, o assistente irá validar os dados do usuário e o login será efetuado. Nossa aplicação utilizará do ``token'' fornecido pela conta do Google, para que possa ser salvo em nosso banco de dados para a sincronização das informações do usuário.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
-\caption{Imagem de exemplo.}
 \includegraphics[width=\linewidth]{figuras/tela-login.png}
+\caption{Ilustração do Caso de Uso 01: \textit{Login}.}
+\label{fig:login}
 \end{figure}
 
 \subsubsection{Caso de Uso 02: Pesquisar}
 
-A barra de pesquisa se encontra no topo da página, junto dela também existe um botão de menu para mostrar todas as abas do aplicativo. A pesquisa será feita através do nome do produto, então o usuário poderá pesquisar por qualquer item, desde que o mesmo esteja no banco de dados, e o sistema irá retornar todos os itens de acordo com a pesquisa feita.
+A barra de pesquisa se encontra no topo da página (ilustrado na Figura  \ref{fig:menu}), junto dela também existe um botão de menu para mostrar todas as abas do aplicativo. A pesquisa será feita através do nome do produto, então o usuário poderá pesquisar por qualquer item, desde que o mesmo esteja no banco de dados, e o sistema irá retornar todos os itens de acordo com a pesquisa feita.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
-\caption{Imagem de exemplo.}
 \includegraphics[width=\linewidth]{figuras/tela-menu.png}
+\caption{Ilustração do Caso de Uso 02: Pesquisar.}
+\label{fig:menu}
 \end{figure}
 
 \subsubsection{Caso de Uso 03: Gerenciar Lista de Compra}
 
-O usuário poderá criar várias listas de compra como se fosse um carrinho de compras. Ao criar uma lista, o usuário poderá escolher um nome para ela; bem como escolher quais itens serão adicionados futuramente, e removê-los a qualquer momento; ou mesmo renomear a lista ou exclui-lá.
+O usuário poderá criar várias listas de compra como se fosse um carrinho de compras (ilustrado na Figura  \ref{fig:lista}). Ao criar uma lista, o usuário poderá escolher um nome para ela; bem como escolher quais itens serão adicionados futuramente, e removê-los a qualquer momento; ou mesmo renomear a lista ou exclui-lá.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
-\caption{Tela onde mostram todos os produtos disponíveis.}
-\includegraphics[width=\linewidth]{figuras/tela_lista_produtos.png}
+\includegraphics[width=\linewidth]{figuras/tela_lista_personalizada.png}
+\caption{Ilustração do Caso de Uso 03: Gerenciar Lista de Compra.}
+\label{fig:lista}
 \end{figure}
 
 \subsubsection{Caso de Uso 04: Comparar Preços}
 
-O usuário poderá comparar preços de um produto em diferentes estabelecimentos, e através do aplicativo descobrir em qual estabelecimento ele pode encontrar o melhor preço do produto que deseja.
+O usuário poderá comparar preços de um produto em diferentes estabelecimentos (ilustrado na Figura  \ref{fig:comparar}), e através do aplicativo descobrir em qual estabelecimento ele pode encontrar o melhor preço do produto que deseja.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
-\caption{Imagem de exemplo.}
 \includegraphics[width=\linewidth]{figuras/tela-comparar.png}
+\caption{Ilustração do Caso de Uso 04: Comparar Preços.}
+\label{fig:comparar}
 \end{figure}
 
-\subsubsection{Caso de Uso 05: Fazer Orçamento}
+\subsubsection{Caso de Uso 05: Visualizar Mapa}
 
-O usuário poderá criar listas de compras, e ao fazer isso ele poderá realizar o orçamento, e descobrir em qual estabelecimento a compra ficará mais barata.
+O usuário terá acesso à um mapa que contém a localização de todos os estabelecimentos locais cadastrados (Ilustrado na Figura \ref{fig:mapa}). Ao clicar nos estabelecimentos mostrados no mapa, irá ser fornecido informações sobre ele, como nome e endereço.
 
-\begin{figure}[!htb]
+\begin{figure}[H]
 \centering
-\caption{Imagem de exemplo.}
-\includegraphics[width=\linewidth]{figuras/placeholder.jpg}
-\end{figure}
-
-\subsubsection{Caso de Uso 06: Visualizar Mapa}
-
-O usuário terá acesso à um mapa que contém a localização de todos os estabelecimentos locais cadastrados. Ao clicar nos estabelecimentos mostrados no mapa, irá ser fornecido informações sobre ele, como nome e endereço.
-
-
-\begin{figure}[!htb]
-\centering
-\caption{Imagem de exemplo.}
 \includegraphics[width=\linewidth]{figuras/tela_mapa.png}
+\caption{Ilustração do Caso de Uso 06: Visualizar Mapa.}
+\label{fig:mapa}
 \end{figure}
