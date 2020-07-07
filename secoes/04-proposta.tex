@@ -14,12 +14,13 @@ No projeto há \textit{CRUDs} (do inglês, \textit{Create, Read, Update \& Delet
 
 \subsection{Progressive Web App}
 
-O \textit{PWA} é uma metodologia de desenvolvimento de aplicações \textit{web} que também se comportem como aplicações nativas, de modo que sua concepção seja facilitada. Ela utiliza \textit{service workers}, que são \textit{scripts} que fazem o gerenciamento do \textit{cache}\footnote{Memória temporária comumente utilizada para armazenar recursos frequentemente acessados por processos.}, fornecendo um melhor desempenho pois os dados e boa parte do \textit{front-end} são persistidos no próprio dispositivo; isso faz com que, em alguns casos, seja possível utilizar a aplicação de forma totalmente \textit{off-line}.
+O \textit{PWA} é uma metodologia de desenvolvimento de aplicações \textit{web} que também se comportem como aplicações nativas, de modo que sua concepção seja facilitada. Ela utiliza \textit{service workers}, que são \textit{scripts} que fazem o gerenciamento do \textit{cache}\footnote{Memória temporária comumente utilizada para armazenar recursos frequentemente acessados por processos.}, fornecendo um melhor desempenho pois os dados e boa parte do \textit{front-end} são persistidos no próprio dispositivo.
 
-Mesmo sendo uma aplicação \textit{web}, o \textit{PWA} pode acessar grande parte dos recursos do dispositivo, como câmera, \textit{GPS} (do inglês, \textit{Global Positioning System}) e contatos, podendo, portanto, ser usada de forma dinâmica.
+Mesmo sendo uma aplicação \textit{web}, o \textit{PWA} pode acessar todos os recursos do dispositivo, como o \textit{GPS} (do inglês, \textit{Global Positioning System}), podendo portanto, ser usada de forma dinâmica.
 
 Diferentemente dos aplicativos que devem ser baixados de uma loja, a única coisa que o usuário precisa fazer é entrar no \textit{site} da aplicação \textit{web} e, caso tenha interesse, pode salva-la em seu dispositivo, como se fosse uma aplicação móvel. Inclusive, o Google Play Store\footnote{Loja de aplicativos voltada para dispositivos móveis Android. Disponível em \url{https://play.google.com/store}.} também se abriu para aplicações \textit{PWA}, tornando sua distribuição retrocompatível com o método convencional.
 
+A aplicação foi desenvolvida em PWA por ser uma tecnologia em ascensão, que permite desenvolver utilizando tecnologias \textit{web} e funciona com se fosse uma aplicação nativa, seja no \textit{smartphone} ou no computador. O PWA hoje conta com forte apoio de empresas gigantes da \textit{web}, como o Google, Microsoft e Mozilla, e alguns exemplos de grande sucesso no mercado são o Tinder, AliExpress, Pinterest, entre outros.
 
 \subsection{Diagrama de Blocos}
 
@@ -111,3 +112,40 @@ O usuário tem acesso a um mapa que contém a localização de todos os estabele
 \caption{Ilustração do Caso de Uso 05: Visualizar Mapa.}
 \label{fig:mapa}
 \end{figure}
+
+\subsection{Integração com os estabelecimentos}
+
+A coleta dos dados é parte fundamental do projeto, e ela pode ser dividida em dois tópicos:
+\begin{itemize}
+    \item \textbf{Do banco de dados universal}: referido como universal, será dessa fonte que serão coletados os dados mais estáticos dos produtos, tais como suas imagens, descrição, identificadores únicos como código de barras, nome, dimensões, peso, entre outros. Essas informações poderão ser coletadas, e mantidas regularmente atualizadas, através do CNP (Cadastro Nacional de Produtos), que é uma API disponibilizada pelo GS1 Brasil\footnote{Disponível em: \url{https://www.gs1br.org/servicos-e-solucoes/cnp-cadastro-nacional-de-produtos}.}.
+    \item \textbf{Dos bancos de dados dos estabelecimentos}: dados como preços e disponibilidade serão provenientes de cada estabelecimento, e serão interpretados pelos adaptadores responsáveis por realizar a integração nos diferentes estabelecimentos.
+\end{itemize}
+
+Uma das principais questões em aberto quanto ao projeto é a respeito de como será feita a integração com os estabelecimentos locais. Para integrar com o Price Search, esses estabelecimentos precisarão dispor de um sistema de gestão empresarial. Não será possível fazer a integração com estabelecimentos que fazem o controle dos dados manualmente. Dessa forma, é possível abranger um amplo número de locais, ao mesmo tempo em que é mantido os requisitos mínimos necessários para que a integração garanta dados consistentes e atualizados em um tempo razoável.
+
+A integração será desenvolvida respeitando alguns princípios para garantir uma ampla adoção e menor resistência:
+\begin{itemize}
+    \item \textbf{Transparência}: como as demais partes do projeto, as integrações serão desenvolvidas e disponibilizadas em código aberto. Dessa forma, as empresas podem analisar o código fonte de forma a garantir sua segurança e privacidade. Opcionalmente, a integração precisará ser capaz de informar ao estabelecimento um relatório com o registro das operações realizadas.
+    \item \textbf{Baixo compromisso}: os únicos dados que serão requeridos pelo Price Search serão os preços dos produtos (e consequentemente um identificador único de cada produto) e um indicador de disponibilidade do produto, seja em forma de quantidade de itens no estoque, ou como uma variável booliana. Isso garante um compromisso baixo do estabelecimento com a aplicação Price Search, garantindo uma política de privacidade muito pouco invasiva.
+    \item \textbf{Baixo custo}: esse tópico pode ser dividido em três novos:
+    \begin{itemize}
+        \item \textbf{Custo computacional}: a integração será instalada no ambiente do estabelecimento, de forma a garantir uma conexão segura e estável com o banco de dados do mesmo. Portanto, precisa exigir poucos recursos computacionais e preferivelmente suportar eventos, para que a sincronização ocorra sempre que e somente quando for necessário, como no momento em que ocorrer um ajuste de preços.
+        \item \textbf{Custo de rede}: não será necessário a sincronização de nenhum dado adicional do produto como imagem e descrição, a não ser seu identificador único. Isso garante uma baixa quantidade de dados trocados através da rede. Opcionalmente, poderá ser verificado previamente quais produtos tiveram seus preços ou disponibilidade alteradas desde a última sincronização, de forma a não precisar trocar dados além do necessário.
+        \item \textbf{Custo de implantação}: o sucesso da aplicação depende da quantidade de estabelecimentos sincronizados, e para que seja diminuída a fricção durante sua implantação, a integração não pode gerar custos por parte do Price Search. Será necessário desenvolver documentações completas quanto a essas integrações para que a mesma possa ser implantada de forma simples pelos próprios estabelecimentos ou pelos seus responsáveis de TI.
+    \end{itemize}
+    \item \textbf{Optativo}: de forma simples, os estabelecimentos terão a capacidade de desligar a sincronização ou alterar os dados cadastrais mostrados no Price Search a seu respeito, para que tenham total controle de seus dados. 
+\end{itemize}
+
+Será necessário o desenvolvimento de adaptadores diferentes para cada sistema de gerenciamento empresarial e/ou banco de dados. Apesar de que cada estabelecimento pode ter um sistema diferente, o número de diferentes sistemas frente ao de estabelecimentos é muito menor. Com o desenvolvimento de um número limitado de adaptadores será possível suportar uma quantidade grande de estabelecimentos, além de que o desenvolvimento poderá ser feito sob demanda (como quando for encontrado um novo sistema que não for suportado).
+
+\subsection{Testes}
+
+Pretende-se realizar diversos tipos de testes no projeto, como:
+\begin{itemize}
+    \item \textbf{Análise sintática}: capaz de identificar erros de sintaxe do código-fonte, que causariam posteriores erros de compilação. Nesta etapa dos testes também são identificados possíveis más práticas de programação bem como regras de formatação não cumpridas.
+    \item \textbf{Teste unitário}: a fim de testar todas as funções de forma isolada, e garantir que uma mudança em uma delas não afete o resultado esperado, que caso contrário, pode causar um mal funcionamento em trechos de código onde essa função é chamada. Também é realizado o teste de cobertura nessa etapa, a fim de saber se todas as funções do código-fonte estão cobertas pelos testes unitários.
+    \item \textbf{Testes de integração}: nessa etapa é realizado o teste das APIs REST. Dessa forma, garantimos que os métodos expostos pelo back-end e que são utilizados pelo front-end continuem a funcionar e a produzir os mesmos resultados esperados, de forma a garantir que uma mudança de código no back-end não cause um mal funcionamento no front-end.
+    \item \textbf{Testes de interface visual}: e por fim são realizados os testes de interface visual, responsáveis por simular um usuário real que interage com a aplicação e analisa cada um dos casos de usos propostos anteriormente, afim de garantir a funcionalidade dos mesmos.
+\end{itemize}
+
+Estes testes, apesar de funcionarem de forma manual, serão executados principalmente de forma automatizada, sempre que e somente quando forem necessários, como por exemplo ao introduzir uma nova mudança no código fonte. Com testes automatizados rodando em um ambiente de integração contínua, podemos nos focar em construir novas funcionalidades enquanto deixamos para os robôs certificarem se o projeto ainda funciona. É uma forma de garantir maior estabilidade ao projeto, necessário principalmente após tê-lo lançado em produção. 

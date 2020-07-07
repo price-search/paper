@@ -1,9 +1,15 @@
 \section{Ferramentas}
 \label{sec:ferramentas}
 
+\subsection{TypeScript}
+\label{ssec:TypeScript}
+Escolhemos o TypeScript\footnote{Disponível em: \url{https://www.typescriptlang.org/}.}, que é uma linguagem de programação traduzida, desenvolvida em código aberto pela Microsoft. Traduzida pois no momento de pré-execução da aplicação, o TypeScript é traduzido para JavaScript, que é uma linguagem de programação interpretada. Tendo como uma das maiores diferenças a tipagem de variáveis, é possível um código em TypeScript ser facilmente convertido em JavaScript. 
+
+Seu uso elimina muitos erros gerados aleatoriamente que resultam de tipos de dados não confiáveis. Graças a isso, o programador pode se concentrar no desenvolvimento de um aplicativo e não perde tempo desnecessário na pesquisa e análise dos erros resultantes. Outra vantagem do TypeScript é a capacidade de eliminar a falta de consistência entre a resposta real do servidor e o formato de dados esperado pelo \textit{front-end}. \cite{Jakub2019TypeScript}
+
 \subsection{Angular}
 \label{ssec:Angular}
-Angular\cite{afonso2018angular} é uma plataforma e \textit{framework} criado pelos desenvolvedores do Google para construção de interface de aplicações usando HTML (do inglês, \textit{HyperText Markup Language}), CSS (do inglês, \textit{Cascading Style Sheets}) e, principalmente, JavaScript. 
+Angular\cite{afonso2018angular} é uma plataforma e \textit{framework} criado pelos desenvolvedores do Google para construção de interface de aplicações usando HTML (do inglês, \textit{HyperText Markup Language}), CSS (do inglês, \textit{Cascading Style Sheets}) e, principalmente, TypeScript. 
 
 Ele possui basicamente dois tipos: AngularJs e o Angular 2+, que são tecnologias completamente diferentes. O AngularJs é um \textit{framework} baseado totalmente em JavaScript para desenvolvimento \textit{web}, enquanto o Angular 2+ surgiu para desenvolvimento tanto para \textit{web} quanto para dispositivos móveis; este faz uso do TypeScript\footnote{Extende o Javascript adicionando tipos para a linguagem. Disponível em \url{https://www.typescriptlang.org/}.} e proporciona diversas mudanças no modo de construção da aplicação. A arquitetura do Angular permite organizar a aplicação em módulos por meio dos \textit{NgModules}\footnote{Configuram o injetor e o compilador e ajudam a organizar e agrupar elementos relacionados. Disponível em: \url{https://angular.io/guide/ngmodules}.}, que fornecem um contexto para os componentes serem compilados.
 
@@ -16,12 +22,6 @@ Uma aplicação sempre tem ao menos um módulo raiz que habilita a inicializaç�
     \item Teste unitário: é facilitado, pois toda a estrutura é desacoplada e as dependências são injetadas, facilitando a criação de \textit{fakes}\footnote{São implementações reais e funcionais de alguma dependência, mas de alguma forma são incompletas para serem colocadas em produção.}, \textit{stubs}\footnote{Pedaço de código usado para substituir algumas outras funcionalidades de programação.}, \textit{spies}\footnote{Denominação dada a um objeto que grava suas interações com outros objetos.} e \textit{mocks}\footnote{Objeto que imita um objeto real para teste.} e melhorando todo o processo de teste de controladores, serviços e diretivas.
 \end{itemize}
 
-\subsection{TypeScript}
-\label{ssec:TypeScript}
-Para a parte de \textit{back-end} escolhemos o TypeScript\footnote{Disponível em: \url{https://www.typescriptlang.org/}.} desenvolvida pela Microsoft, que é uma linguagem de programação de código aberto e traduzida, ou seja, no momento de pré-execução da aplicação, o TypeScript é traduzido para JavaScript, que é uma linguagem de programação interpretada. Tendo como uma das maiores diferenças a tipagem de variáveis, é possível um código em TypeScript ser facilmente convertido em JavaScript. 
-
-Seu uso elimina muitos erros gerados aleatoriamente que resultam de tipos de dados não confiáveis. Graças a isso, o programador pode se concentrar no desenvolvimento de um aplicativo e não perde tempo desnecessário na pesquisa e análise dos erros resultantes. Outra vantagem do TypeScript é a capacidade de eliminar a falta de consistência entre a resposta real do servidor e o formato de dados esperado pelo \textit{front-end}. \cite{Jakub2019TypeScript}
-
 \subsection{NestJS}
 \label{ssec:NestJS}
 O NestJS\footnote{Disponível em: \url{https://nestjs.com/}.} é um \textit{framework} para criação de \textit{back-end web} usando TypeScript para desenvolvimento de \textit{REST} APIs (do inglês, \textit{Application Programming Interface}), com estruturas de código similar ao Angular. Ele cria uma camada de abstração em cima de uma das bibliotecas mais utilizadas para criação de aplicações \textit{web} no mundo, o Node.js. Portanto, é muito difícil comentar sobre um, sem mencionar o outro; é preciso ressaltar que deve-se ter instalado em sua máquina o Node.js para que seja possível utilizar o NestJS. Ele é uma estrutura para criar aplicativos de forma eficiente, contando com um CLI que permite a criação e configuração inicial do projeto.
@@ -33,20 +33,6 @@ O NestJS fornece uma arquitetura de aplicativos pronta para uso que permite que 
     \item A estrutura é orientada a anotações, e as anotações tornam o desenvolvimento mais simples;
     \item A ferramenta de linha de comando permite monitorar o projeto, gerar componentes da arquitetura NestJS e exibir informações do projeto.
 \end{itemize}
-
-\subsection{Visual Studio Code}
-\label{ssec:VSCode}
-Como IDE (\textit{Integrated Development Environment}), a ferramenta escolhida para ser utilizada foi o Visual Studio Code\footnote{Disponível em: \url{https://code.visualstudio.com/}.}, que é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. A escolha dessa ferramenta foi devido ela ser de código aberto, por possuir suporte para Git\footnote{Ferramenta grátis e de código aberto para controle de versão de código.} e à abrangência que ela traz com o uso de extensões (ferramentas que estendem e facilitam o desenvolvimento na linguagem de programação escolhida).
-
-Com suporte para centenas de idiomas, o Visual Studio Code ajuda o usuário a ser instantaneamente produtivo com realce de sintaxe, correspondência de colchetes, recuo automático, seleção de caixa, trechos e sugestões de código, etc. Também oferece atalhos de teclado intuitivos e mapeados de forma colaborativa pela comunidade, personalização fácil e navegação descomplicada no código-fonte. \cite{microsoft2020VSCode}
-
-
-\subsection{Gitpod}
-\label{ssec:Gitpod}
-Como o GitHub\footnote{Plataforma de hospedagem de código-fonte com controle de versão que faz uso do Git. Disponível em: \url{https://github.com/}.} possui recursos limitados para edição, que frequentemente forçam os usuários a utilizar recursos em suas máquinas locais para resolver problemas (muitas vezes pequenos), o Gitpod\footnote{Disponível em: \url{https://www.gitpod.io/}.} surge como um poderoso complemento ao GitHub. Não consiste apenas em uma IDE \textit{online}, mas também, uma extensão para edição do código presente no GitHub, usando como IDE base o Visual Studio Code. 
-
-Diferentemente das \textit{IDEs} tradicionais da nuvem e da área de trabalho, o Gitpod entende o contexto e prepara o ambiente de desenvolvimento automaticamente. Por exemplo, se um usuário estiver criando um espaço de trabalho Gitpod a partir de um \textit{pull request}\footnote{Mecanismo usado para integrar uma mudança de código de um projeto, possibilitando a revisão de código por outros colaboradores.} do GitHub, a \textit{IDE} será aberta no modo de revisão de código. Além disso, os espaços de trabalho do Gitpod devem ser descartáveis. Ou seja, não é necessário manter nada; estes espaços são criados quando sob demanda, e o desenvolvedor pode simplesmente abandoná-los quando terminar seu trabalho. \cite{typefox2020Gitpod}.
-
 
 \subsection{Swagger}
 \label{ssec:Swagger}
@@ -61,10 +47,26 @@ A ferramenta Swagger\footnote{Disponível em: \url{https://swagger.io/}.} é fei
     \item Termos, informações de contato e licença para usar a API.
 \end{itemize}
 
+\subsection{Visual Studio Code}
+\label{ssec:VSCode}
+Como IDE (\textit{Integrated Development Environment}), a ferramenta escolhida para ser utilizada foi o Visual Studio Code\footnote{Disponível em: \url{https://code.visualstudio.com/}.}, que é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. A escolha dessa ferramenta foi devido ela ser de código aberto, por possuir suporte para Git\footnote{Ferramenta grátis e de código aberto para controle de versão de código.} e à abrangência que ela traz com o uso de extensões (ferramentas que estendem e facilitam o desenvolvimento na linguagem de programação escolhida).
+
+Com suporte para centenas de idiomas, o Visual Studio Code ajuda o usuário a ser instantaneamente produtivo com realce de sintaxe, correspondência de colchetes, recuo automático, seleção de caixa, trechos e sugestões de código, etc. Também oferece atalhos de teclado intuitivos e mapeados de forma colaborativa pela comunidade, personalização fácil e navegação descomplicada no código-fonte. \cite{microsoft2020VSCode}
+
+Especificamente para o projeto, foi utilizada um recurso único do Visual Studio Code, o Remote Development - Containers\footnote{Disponível em: \url{https://code.visualstudio.com/docs/remote/containers}.}. Através desse recurso, podemos configurar um ambiente de desenvolvimento totalmente customizado e descartável, independente do sistema operacional do computador do usuário. Dessa forma, não é necessário que os desenvolvedores recorram a processos manuais para instalar todas as ferramentas necessárias para iniciar o desenvolvimento do projeto.
+
+\subsection{Gitpod}
+\label{ssec:Gitpod}
+Como o GitHub\footnote{Plataforma de hospedagem de código-fonte com controle de versão que faz uso do Git. Disponível em: \url{https://github.com/}.} possui recursos limitados para edição, que frequentemente forçam os usuários a utilizar recursos em suas máquinas locais para resolver problemas (muitas vezes pequenos), o Gitpod\footnote{Disponível em: \url{https://www.gitpod.io/}.} surge como um poderoso complemento ao GitHub. Não consiste apenas em uma IDE \textit{online}, mas também, uma extensão para edição do código presente no GitHub, usando como IDE base o Visual Studio Code.
+
+Diferentemente das \textit{IDEs} tradicionais da nuvem e da área de trabalho, o Gitpod entende o contexto e prepara o ambiente de desenvolvimento automaticamente. Por exemplo, se um usuário estiver criando um espaço de trabalho Gitpod a partir de um \textit{pull request}\footnote{Mecanismo usado para integrar uma mudança de código de um projeto, possibilitando a revisão de código por outros colaboradores.} do GitHub, a \textit{IDE} será aberta no modo de revisão de código. Além disso, os espaços de trabalho do Gitpod devem ser descartáveis. Ou seja, não é necessário manter nada; estes espaços são criados quando sob demanda, e o desenvolvedor pode simplesmente abandoná-los quando terminar seu trabalho. \cite{typefox2020Gitpod}.
+
 \subsection{Ambiente}
 \label{ssec:Ambiente}
-Com as principais ferramentas já descritas, há outras que também contribuem para o desenvolvimento e ajudam nas configurações de ambiente, que serão descritas a seguir. Entre elas estão o Node.js, o interpretador JavaScript usado para executar os códigos transpilados a partir do TypeScript. É preciso tê-lo instalado para que se consiga executar os comandos NestJS.
+Com as principais ferramentas já descritas, há outras que também contribuem para o desenvolvimento e ajudam nas configurações de ambiente, que serão descritas a seguir. Entre elas estão o Node.js, o interpretador JavaScript usado para executar os códigos transpilados a partir do TypeScript. É preciso tê-lo instalado para que se consiga executar os comandos do NestJS e do Angular.
 
 Para controle de versão, foi utilizado o Git com o código hospedado no GitHub, usados para revisão de código (por meio dos \textit{pull requests}), gerenciamento de tarefas (via \textit{issues}) e integração contínua (graças ao GitHub Actions\footnote{Ferramenta de integração contínua que permite a criação de fluxos de trabalho personalizados no tocante do ciclo de vida de desenvolvimento do \textit{software}. Disponível em: \url{https://github.com/features/actions}.}).
 
-Por fim, o banco de dados escolhido foi o PostgreSQL\footnote{Sistema gerenciador de banco de dados objeto-relacional, desenvolvido como projeto de código aberto. Disponível em \url{https://www.postgresql.org/}.}, por se tratar de um \textit{software} gratuito e de código aberto, altamente aprovado em ambientes de produção. O PostgreSQL também é altamente extensível, ou seja, é possível definir tipos de dados e funções personalizadas e até escrever o código em diferentes linguagens de programação sem a necessidade de recriar o banco de dados. Foi utilizado o TypeORM\footnote{Disponível em: \url{https://typeorm.io/}.} para fazer o mapeamento entre o código e o banco de dados, com isso, não precisando se preocupar com a escritas de consultas SQL\footnote{Linguagem de pesquisa declarativa padrão para banco de dados relacional.} (do inglês, \textit{Structured Query Language}).
+Por fim, o banco de dados escolhido foi o PostgreSQL\footnote{Sistema gerenciador de banco de dados objeto-relacional, desenvolvido como projeto de código aberto. Disponível em \url{https://www.postgresql.org/}.}, por se tratar de um \textit{software} gratuito e de código aberto, altamente aprovado em ambientes de produção. O PostgreSQL também é altamente extensível, ou seja, é possível definir tipos de dados e funções personalizadas e até escrever o código em diferentes linguagens de programação sem a necessidade de recriar o banco de dados.
+
+Foi utilizado o TypeORM\footnote{Disponível em: \url{https://typeorm.io/}.} para fazer o mapeamento entre os objetos definidos em TypeScript e o banco de dados, para que assim não fosse preciso se preocupar com as escritas de código SQL\footnote{Linguagem de pesquisa declarativa padrão para banco de dados relacional.} (do inglês, \textit{Structured Query Language}). Com o TypeORM, funções como criação, leitura, remoção e atualização são abstraídas e disponibilizadas de forma pronta para serem utilizadas. Facilita também a criação de roteiros de população e migração do banco de dados, uma vez que estes podem ser então escritos com TypeScript.
